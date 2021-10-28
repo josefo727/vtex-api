@@ -1,0 +1,65 @@
+<?php
+
+namespace Vtex\Logistic;
+
+use Vtex\VtexClient;
+
+/**
+ * @method array retrieveShippingPoliciesById(array $args = [])
+ * @method array deleteShippingPoliciesById(array $args = [])
+ * @method array updateShippingPolicy(array $args = [])
+ * @method array listShippingPolicies(array $args = [])
+ * @method array createShippingPolicy(array $args = [])
+ * @method array updateShippingPolicyById(array $args = [])
+ * @method array createupdateFreightValues(array $args = [])
+ * @method array listFreightValues(array $args = [])
+ * @method array retrieveBlockedDeliveryWindows(array $args = [])
+ * @method array addBlockedDeliveryWindows(array $args = [])
+ * @method array removeBlockedDeliveryWindows(array $args = [])
+ * @method array createupdateDock(array $args = [])
+ * @method array listAllDocks(array $args = [])
+ * @method array listDockById(array $args = [])
+ * @method array deleteDock(array $args = [])
+ * @method array activateDock(array $args = [])
+ * @method array deactivateDock(array $args = [])
+ * @method array createupdateWarehouse(array $args = [])
+ * @method array listAllWarehouses(array $args = [])
+ * @method array listWarehouseById(array $args = [])
+ * @method array removeWarehouse(array $args = [])
+ * @method array activateWarehouse(array $args = [])
+ * @method array deactivateWarehouse(array $args = [])
+ * @method array listInventoryBySku(array $args = [])
+ * @method array listInventoryPerWarehouse(array $args = [])
+ * @method array updateInventoryBySkuAndWarehouse(array $args = [])
+ * @method array listInventoryPerDock(array $args = [])
+ * @method array listInventoryPerDockAndWarehouse(array $args = [])
+ * @method array listInventoryWithDispatchedReservations(array $args = [])
+ * @method array listSupplyLots(array $args = [])
+ * @method array saveSupplyLot(array $args = [])
+ * @method array transferSupplyLot(array $args = [])
+ * @method array createupdateHoliday(array $args = [])
+ * @method array listHolidayById(array $args = [])
+ * @method array deleteHoliday(array $args = [])
+ * @method array listAllHolidays(array $args = [])
+ * @method array createReservation(array $args = [])
+ * @method array listReservationById(array $args = [])
+ * @method array confirmReservation(array $args = [])
+ * @method array acknowledgmentReservation(array $args = [])
+ * @method array cancelReservation(array $args = [])
+ * @method array listReservationByWarehouseAndSku(array $args = [])
+ * @method array calculateSLA(array $args = [])
+ * @method array createUpdatePickupPoint(array $args = [])
+ * @method array listPickupPointById(array $args = [])
+ * @method array deletePickupPoint(array $args = [])
+ * @method array listPagedPickupPoints(array $args = [])
+ * @method array listPagedPolygons(array $args = [])
+ * @method array createupdatePolygon(array $args = [])
+ * @method array listPolygonById(array $args = [])
+ * @method array deletePolygon(array $args = [])
+ * @method array searchCapacityReservationsInTimeRange(array $args = [])
+ * @method array getCapacityReservationUsageByWindow(array $args = [])
+ */
+class LogisticClient extends VtexClient
+{
+
+}

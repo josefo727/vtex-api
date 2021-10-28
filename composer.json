@@ -1,0 +1,24 @@
+{
+    "name": "brandlive/api-vtex",
+    "description": "Package for integration projects, API requests to Vtex.",
+    "keywords": ["vtex","sdk"],
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Vtex\\": "src/"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "José R. Gutierrez",
+            "email": "josefo727@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0",
+        "ext-json": "*"
+    }
+}

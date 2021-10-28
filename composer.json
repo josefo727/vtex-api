@@ -1,5 +1,5 @@
 {
-    "name": "brandlive/api-vtex",
+    "name": "brandlive/vtex-api",
     "description": "Package for integration projects, API requests to Vtex.",
     "keywords": ["vtex","sdk"],
     "type": "library",

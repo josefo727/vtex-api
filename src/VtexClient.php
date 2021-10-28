@@ -158,10 +158,12 @@ class VtexClient
                 ]
             );
 
-            if(is_bool(json_decode($this->response->getBody())))
-                return json_decode($this->response->getBody());
+            try {
+                return json_decode($this->response->getBody()->getContents(), true);
+            } catch (ClientException $clientException) {
+                return json_decode($response->getBody(), true);
+            }
 
-            return json_decode($this->response->getBody()->getContents(), true);
         } catch (ClientException $clientException) {
             throw new VtexException(
                 $clientException->getResponse()->getBody()->getContents()

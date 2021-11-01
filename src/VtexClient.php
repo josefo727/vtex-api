@@ -146,16 +146,21 @@ class VtexClient
                 $headers[$securitySchema['name']] = $this->credentials[$key];
             }
 
+            $arguments = [
+                'headers' => $headers,
+                'query' => $queryParams
+            ];
+
+            if(isset($args[0]['body'])) {
+                $arguments['json'] = $args[0]['body'];
+            }
+
             $client = new Client();
 
             $this->response = $client->request(
                 $methodOperation,
                 $uri,
-                [
-                    'headers' => $headers,
-                    'query' => $queryParams,
-                    'json' => $args[0]['body'] ?? []
-                ]
+                $arguments
             );
 
             try {

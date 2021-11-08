@@ -4994,15 +4994,6 @@
             }
           },
           {
-            "name":"brandId",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
-            }
-          },
-          {
             "name":"Content-Type",
             "in":"header",
             "required":true,

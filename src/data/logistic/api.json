@@ -1277,6 +1277,61 @@
         "deprecated":false
       }
     },
+    "/logistics/pvt/inventory/items/{skuId}":{
+      "get":{
+        "operationId":"ListInventoryBySkuItem",
+        "parameters":[
+          {
+            "name":"accountName",
+            "in":"path",
+            "required":true,
+            "schema":{
+              "type":"string",
+              "default":"apiexamples"
+            }
+          },
+          {
+            "name":"environment",
+            "in":"path",
+            "required":true,
+            "schema":{
+              "type":"string",
+              "default":"vtexcommercestable"
+            }
+          },
+          {
+            "name":"Content-Type",
+            "in":"header",
+            "required":true,
+            "style":"simple",
+            "schema":{
+              "type":"string",
+              "example":"application/json; charset=utf-8"
+            }
+          },
+          {
+            "name":"Accept",
+            "in":"header",
+            "required":true,
+            "style":"simple",
+            "schema":{
+              "type":"string",
+              "example":"application/json"
+            }
+          },
+          {
+            "name":"skuId",
+            "in":"path",
+            "required":true,
+            "style":"simple",
+            "schema":{
+              "type":"string"
+            }
+          }
+        ],
+        "deprecated":false
+      }
+    },
     "/logistics/pvt/inventory/items/{skuId}/warehouses/{warehouseId}":{
       "get":{
         "operationId":"ListInventoryPerWarehouse",

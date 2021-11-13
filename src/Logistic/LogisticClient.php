@@ -29,6 +29,7 @@ use Vtex\VtexClient;
  * @method array activateWarehouse(array $args = [])
  * @method array deactivateWarehouse(array $args = [])
  * @method array listInventoryBySku(array $args = [])
+ * @method array listInventoryBySkuItem(array $args = [])
  * @method array listInventoryPerWarehouse(array $args = [])
  * @method array updateInventoryBySkuAndWarehouse(array $args = [])
  * @method array listInventoryPerDock(array $args = [])

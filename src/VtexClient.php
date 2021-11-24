@@ -166,7 +166,7 @@ class VtexClient
             try {
                 return json_decode($this->response->getBody()->getContents(), true);
             } catch (ClientException $clientException) {
-                return json_decode($response->getBody(), true);
+                return json_decode($this->response->getBody(), true);
             }
 
         } catch (ClientException $clientException) {

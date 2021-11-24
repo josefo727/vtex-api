@@ -30,6 +30,7 @@ use Vtex\VtexClient;
  * @method array getAddressByPostalCode(array $args = [])
  * @method array placeOrderFromAnExistingCart(array $args = [])
  * @method array placeOrder(array $args = [])
+ * @method array processOrder(array $args = [])
  */
 class CheckoutClient extends VtexClient
 {

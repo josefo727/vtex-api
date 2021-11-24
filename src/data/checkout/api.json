@@ -1,1514 +1,1567 @@
 {
-  "servers":[
+  "servers": [
     {
-      "url":"https://{accountName}.{environment}.com.br",
-      "description":"VTEX server url"
+      "url": "https://{accountName}.{environment}.com.br",
+      "description": "VTEX server url"
     }
   ],
-  "paths":{
-    "/api/checkout/pub/orderForms/simulation":{
-      "post":{
-        "operationId":"CartSimulation",
-        "parameters":[
+  "paths": {
+    "/api/checkout/pub/orderForms/simulation": {
+      "post": {
+        "operationId": "CartSimulation",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"RnbBehavior",
-            "in":"query",
-            "required":false,
-            "style":"form",
-            "schema":{
-              "type":"integer",
-              "default":0
+            "name": "RnbBehavior",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "default": 0
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/api/checkout/pub/orderForm/":{
-      "get":{
-        "operationId":"NewShoppingCart",
-        "parameters":[
+    "/api/checkout/pub/orderForm/": {
+      "get": {
+        "operationId": "NewShoppingCart",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/api/checkout/pub/orderForm/{orderFormId}":{
-      "get":{
-        "operationId":"GetCartInformation",
-        "parameters":[
+    "/api/checkout/pub/orderForm/{orderFormId}": {
+      "get": {
+        "operationId": "GetCartInformation",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"orderFormId",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"ede846222cd44046ba6c638442c3505a"
+            "name": "orderFormId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "ede846222cd44046ba6c638442c3505a"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"refreshOutdatedData",
-            "in":"query",
-            "required":false,
-            "style":"form",
-            "schema":{
-              "type":"boolean",
-              "default":true
+            "name": "refreshOutdatedData",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "boolean",
+              "default": true
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/api/checkout/pub/orderForm/{orderFormId}/items/removeAll":{
-      "post":{
-        "operationId":"RemoveAllItems",
-        "parameters":[
+    "/api/checkout/pub/orderForm/{orderFormId}/items/removeAll": {
+      "post": {
+        "operationId": "RemoveAllItems",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"orderFormId",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"ede846222cd44046ba6c638442c3505a"
+            "name": "orderFormId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "ede846222cd44046ba6c638442c3505a"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/checkout/changeToAnonymousUser/{orderFormId}":{
-      "get":{
-        "operationId":"RemoveAllPersonalData",
-        "parameters":[
+    "/checkout/changeToAnonymousUser/{orderFormId}": {
+      "get": {
+        "operationId": "RemoveAllPersonalData",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"orderFormId",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"ede846222cd44046ba6c638442c3505a"
+            "name": "orderFormId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "ede846222cd44046ba6c638442c3505a"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/api/checkout/pub/orderForm/{orderFormId}/items":{
-      "patch":{
-        "operationId":"UpdateCartItems",
-        "parameters":[
+    "/api/checkout/pub/orderForm/{orderFormId}/items": {
+      "patch": {
+        "operationId": "UpdateCartItems",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"orderFormId",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"ede846222cd44046ba6c638442c3505a"
+            "name": "orderFormId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "ede846222cd44046ba6c638442c3505a"
             }
           },
           {
-            "name":"allowOutdatedData",
-            "in":"query",
-            "required":false,
-            "style":"form",
-            "schema":{
-              "type":"array",
-              "default":[
+            "name": "allowOutdatedData",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "array",
+              "default": [
                 "paymentData"
               ],
-              "items":[
-
-              ]
+              "items": []
             }
           }
         ],
-        "requestBody":{
-          "description":"",
-          "content":{
-            "application/json":{
-              "schema":{
-                "$ref":"#/components/schemas/ItemsUpdateRequest"
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemsUpdateRequest"
               },
-              "example":{
-                "orderItems":[
+              "example": {
+                "orderItems": [
                   {
-                    "quantity":0,
-                    "index":0
+                    "quantity": 0,
+                    "index": 0
                   },
                   {
-                    "seller":"1",
-                    "quantity":1,
-                    "id":"38"
+                    "seller": "1",
+                    "quantity": 1,
+                    "id": "38"
                   },
                   {
-                    "seller":"1",
-                    "quantity":2,
-                    "id":"35"
+                    "seller": "1",
+                    "quantity": 2,
+                    "id": "35"
                   }
                 ]
               }
             }
           },
-          "required":true
+          "required": true
         },
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/api/checkout/pub/orderForm/{orderFormId}/items/{itemIndex}/price":{
-      "put":{
-        "operationId":"ChangePrice",
-        "parameters":[
+    "/api/checkout/pub/orderForm/{orderFormId}/items/{itemIndex}/price": {
+      "put": {
+        "operationId": "ChangePrice",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"orderFormId",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"ede846222cd44046ba6c638442c3505a"
+            "name": "orderFormId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "ede846222cd44046ba6c638442c3505a"
             }
           },
           {
-            "name":"itemIndex",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string"
+            "name": "itemIndex",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/api/checkout/pub/orderForm/{orderFormId}/profile":{
-      "patch":{
-        "operationId":"IgnoreProfileData",
-        "parameters":[
+    "/api/checkout/pub/orderForm/{orderFormId}/profile": {
+      "patch": {
+        "operationId": "IgnoreProfileData",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"orderFormId",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"ede846222cd44046ba6c638442c3505a"
+            "name": "orderFormId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "ede846222cd44046ba6c638442c3505a"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           }
         ],
-        "requestBody":{
-          "description":"",
-          "content":{
-            "application/json":{
-              "schema":{
-                "type":"object",
-                "properties":{
-                  "ignoreProfileData":{
-                    "type":"boolean",
-                    "description":"Indicates whether profile data should be ignored.",
-                    "default":false
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ignoreProfileData": {
+                    "type": "boolean",
+                    "description": "Indicates whether profile data should be ignored.",
+                    "default": false
                   }
                 }
               },
-              "example":{
-                "price":10000
+              "example": {
+                "price": 10000
               }
             }
           },
-          "required":true
+          "required": true
         },
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/api/checkout/pub/orderForm/{orderFormId}/attachments/clientProfileData":{
-      "post":{
-        "operationId":"AddClientProfile",
-        "parameters":[
+    "/api/checkout/pub/orderForm/{orderFormId}/attachments/clientProfileData": {
+      "post": {
+        "operationId": "AddClientProfile",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"orderFormId",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string"
+            "name": "orderFormId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/api/checkout/pub/orderForm/{orderFormId}/attachments/shippingData":{
-      "post":{
-        "operationId":"AddShippingAddressAndSelectDeliveryOption",
-        "parameters":[
+    "/api/checkout/pub/orderForm/{orderFormId}/attachments/shippingData": {
+      "post": {
+        "operationId": "AddShippingAddressAndSelectDeliveryOption",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"orderFormId",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string"
+            "name": "orderFormId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/api/checkout/pub/orderForm/{orderFormId}/attachments/clientPreferencesData":{
-      "post":{
-        "operationId":"AddClientPreferences",
-        "parameters":[
+    "/api/checkout/pub/orderForm/{orderFormId}/attachments/clientPreferencesData": {
+      "post": {
+        "operationId": "AddClientPreferences",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"orderFormId",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string"
+            "name": "orderFormId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/api/checkout/pub/orderForm/{orderFormId}/attachments/marketingData":{
-      "post":{
-        "operationId":"AddMarketingData",
-        "parameters":[
+    "/api/checkout/pub/orderForm/{orderFormId}/attachments/marketingData": {
+      "post": {
+        "operationId": "AddMarketingData",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"orderFormId",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string"
+            "name": "orderFormId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/api/checkout/pub/orderForm/{orderFormId}/attachments/paymentData":{
-      "post":{
-        "operationId":"AddPaymentData",
-        "parameters":[
+    "/api/checkout/pub/orderForm/{orderFormId}/attachments/paymentData": {
+      "post": {
+        "operationId": "AddPaymentData",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"orderFormId",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string"
+            "name": "orderFormId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/api/checkout/pub/orderForm/{orderFormId}/customData/{appId}":{
-      "put":{
-        "operationId":"SetMultipleCustomFieldValues",
-        "parameters":[
+    "/api/checkout/pub/orderForm/{orderFormId}/customData/{appId}": {
+      "put": {
+        "operationId": "SetMultipleCustomFieldValues",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"orderFormId",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string"
+            "name": "orderFormId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"appId",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string"
+            "name": "appId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/api/checkout/pub/orderForm/{orderFormId}/customData/{appId}/{appFieldName}":{
-      "put":{
-        "operationId":"SetSingleCustomFieldValue",
-        "parameters":[
+    "/api/checkout/pub/orderForm/{orderFormId}/customData/{appId}/{appFieldName}": {
+      "put": {
+        "operationId": "SetSingleCustomFieldValue",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"orderFormId",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string"
+            "name": "orderFormId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
             }
           },
           {
-            "name":"appId",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string"
+            "name": "appId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
             }
           },
           {
-            "name":"appFieldName",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string"
+            "name": "appFieldName",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       },
-      "delete":{
-        "operationId":"RemoveSingleCustomFieldValue",
-        "parameters":[
+      "delete": {
+        "operationId": "RemoveSingleCustomFieldValue",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"orderFormId",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string"
+            "name": "orderFormId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
             }
           },
           {
-            "name":"appId",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string"
+            "name": "appId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
             }
           },
           {
-            "name":"appFieldName",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string"
+            "name": "appFieldName",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/api/checkout/pvt/configuration/orderForm":{
-      "get":{
-        "operationId":"GetOrderFormConfiguration",
-        "parameters":[
+    "/api/checkout/pvt/configuration/orderForm": {
+      "get": {
+        "operationId": "GetOrderFormConfiguration",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       },
-      "post":{
-        "operationId":"UpdateOrderFormConfiguration",
-        "parameters":[
+      "post": {
+        "operationId": "UpdateOrderFormConfiguration",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/api/checkout/pvt/configuration/window-to-change-seller":{
-      "get":{
-        "operationId":"GetWindowToChangeSeller",
-        "parameters":[
+    "/api/checkout/pvt/configuration/window-to-change-seller": {
+      "get": {
+        "operationId": "GetWindowToChangeSeller",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       },
-      "post":{
-        "operationId":"UpdateWindowToChangeSeller",
-        "parameters":[
+      "post": {
+        "operationId": "UpdateWindowToChangeSeller",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/api/checkout/pub/orderForm/{orderFormId}/installments":{
-      "get":{
-        "operationId":"CartInstallments",
-        "parameters":[
+    "/api/checkout/pub/orderForm/{orderFormId}/installments": {
+      "get": {
+        "operationId": "CartInstallments",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"orderFormId",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string"
+            "name": "orderFormId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           },
           {
-            "name":"paymentSystem",
-            "in":"query",
-            "required":true,
-            "style":"form",
-            "explode":true,
-            "schema":{
-              "type":"integer"
+            "name": "paymentSystem",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/api/checkout/pub/pickup-points":{
-      "get":{
-        "operationId":"ListPickupPointsByLocation",
-        "parameters":[
+    "/api/checkout/pub/pickup-points": {
+      "get": {
+        "operationId": "ListPickupPointsByLocation",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"geoCoordinates",
-            "in":"query",
-            "required":false,
-            "style":"form",
-            "schema":{
-              "type":"string",
-              "default":"00.0000000;00.0000000"
+            "name": "geoCoordinates",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "default": "00.0000000;00.0000000"
             }
           },
           {
-            "name":"postalCode",
-            "in":"query",
-            "required":false,
-            "style":"form",
-            "schema":{
-              "type":"string",
-              "default":"1234000"
+            "name": "postalCode",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "default": "1234000"
             }
           },
           {
-            "name":"countryCode",
-            "in":"query",
-            "required":false,
-            "style":"form",
-            "schema":{
-              "type":"string",
-              "default":"BRA"
+            "name": "countryCode",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "default": "BRA"
             }
           }
         ]
       }
     },
-    "/api/checkout/pub/postal-code/{countryCode}/{postalCode}":{
-      "get":{
-        "operationId":"GetAddressByPostalCode",
-        "parameters":[
+    "/api/checkout/pub/postal-code/{countryCode}/{postalCode}": {
+      "get": {
+        "operationId": "GetAddressByPostalCode",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"countryCode",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"BRA"
+            "name": "countryCode",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "BRA"
             }
           },
           {
-            "name":"postalCode",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"1234000"
+            "name": "postalCode",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "1234000"
             }
           }
         ]
       }
     },
-    "/api/checkout/pub/orderForm/{orderFormId}/transaction":{
-      "post":{
-        "operationId":"PlaceOrderFromAnExistingCart",
-        "parameters":[
+    "/api/checkout/pub/orderForm/{orderFormId}/transaction": {
+      "post": {
+        "operationId": "PlaceOrderFromAnExistingCart",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"orderFormId",
-            "in":"path",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"ede846222cd44046ba6c638442c3505a"
+            "name": "orderFormId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "ede846222cd44046ba6c638442c3505a"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
       }
     },
-    "/api/checkout/pub/orders":{
-      "put":{
-        "operationId":"PlaceOrder",
-        "parameters":[
+    "/api/checkout/pub/orders": {
+      "put": {
+        "operationId": "PlaceOrder",
+        "parameters": [
           {
-            "name":"accountName",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"apiexamples"
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
             }
           },
           {
-            "name":"environment",
-            "in":"path",
-            "required":true,
-            "schema":{
-              "type":"string",
-              "default":"vtexcommercestable"
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
             }
           },
           {
-            "name":"Content-Type",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           },
           {
-            "name":"Accept",
-            "in":"header",
-            "required":true,
-            "style":"simple",
-            "schema":{
-              "type":"string",
-              "default":"application/json"
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
             }
           }
         ],
-        "deprecated":false
+        "deprecated": false
+      }
+    },
+    "/api/checkout/pub/gatewayCallback/{orderGroup}": {
+      "post": {
+        "operationId": "ProcessOrder",
+        "parameters": [
+          {
+            "name": "accountName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "apiexamples"
+            }
+          },
+          {
+            "name": "environment",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "vtexcommercestable"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "default": "application/json"
+            }
+          },
+          {
+            "name": "Cookie",
+            "in": "header",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "deprecated": false
       }
     }
   },
-  "components":{
-    "securitySchemes":{
-      "appKey":{
-        "type":"apiKey",
-        "in":"header",
-        "name":"X-VTEX-API-AppKey"
+  "components": {
+    "securitySchemes": {
+      "appKey": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-VTEX-API-AppKey"
       },
-      "appToken":{
-        "type":"apiKey",
-        "in":"header",
-        "name":"X-VTEX-API-AppToken"
+      "appToken": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-VTEX-API-AppToken"
       }
     }
   }

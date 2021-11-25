@@ -26,6 +26,8 @@ class VtexClient
      */
     private $response;
 
+    private $cookies;
+
     /**
      * @param array $config
      */
@@ -115,9 +117,7 @@ class VtexClient
                                             );
                                         }
                                     } elseif (isset($queryArgs[$parameter['name']])) {
-                                        $queryParams[$parameter['name']] = $queryArgs[
-                                        $parameter['name']
-                                        ];
+                                        $queryParams[$parameter['name']] = $queryArgs[$parameter['name']];
                                     }
 
                                     break;
@@ -151,11 +151,11 @@ class VtexClient
                 'query' => $queryParams
             ];
 
-            if(isset($args[0]['body'])) {
+            if (isset($args[0]['body'])) {
                 $arguments['json'] = $args[0]['body'];
             }
 
-            $client = new Client();
+            $client = new Client(['cookies' => true]);
 
             $this->response = $client->request(
                 $methodOperation,
@@ -163,12 +163,14 @@ class VtexClient
                 $arguments
             );
 
+            // Se define la colección de cookies retornadas en la petición
+            $this->cookies = $client->getConfig('cookies');
+
             try {
                 return json_decode($this->response->getBody()->getContents(), true);
             } catch (ClientException $clientException) {
-                return json_decode($response->getBody(), true);
+                return json_decode($this->response->getBody(), true);
             }
-
         } catch (ClientException $clientException) {
             throw new VtexException(
                 $clientException->getResponse()->getBody()->getContents()
@@ -182,6 +184,14 @@ class VtexClient
                 $exception->getMessage()
             );
         }
+    }
+
+    public function getCookie($key)
+    {
+        if (isset($this->cookies)) {
+            return $this->cookies->getCookieByName($key);
+        }
+        return null;
     }
 
     /**

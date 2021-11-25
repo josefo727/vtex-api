@@ -9,7 +9,8 @@ use phpDocumentor\Reflection\Types\Mixed_;
 use Psr\Http\Message\ResponseInterface;
 use Vtex\Exception\VtexException;
 
-class VtexClient {
+class VtexClient
+{
     /**
      * @var array
      */
@@ -30,7 +31,8 @@ class VtexClient {
     /**
      * @param array $config
      */
-    public function __construct(array $config = []) {
+    public function __construct(array $config = [])
+    {
         $this->api = api($this->parseClass());
 
         if (isset($config['credentials'])) {
@@ -48,7 +50,8 @@ class VtexClient {
     /**
      * @return ResponseInterface
      */
-    public function getResponse(): ResponseInterface {
+    public function getResponse(): ResponseInterface
+    {
         return $this->response;
     }
 
@@ -58,7 +61,8 @@ class VtexClient {
      * @return array|boolean
      * @throws VtexException
      */
-    public function __call(string $name, array $args = []) {
+    public function __call(string $name, array $args = [])
+    {
         try {
             $apiPaths = $this->api['paths'];
             $securitySchemas = $this->api['components']['securitySchemes'] ?? [];
@@ -182,7 +186,8 @@ class VtexClient {
         }
     }
 
-    public function getCookie($key) {
+    public function getCookie($key)
+    {
         if (isset($this->cookies)) {
             return $this->cookies->getCookieByName($key);
         }
@@ -192,7 +197,8 @@ class VtexClient {
     /**
      * @return string
      */
-    private function parseClass(): string {
+    private function parseClass(): string
+    {
         $getClass = get_class($this);
         $service = substr($getClass, strrpos($getClass, '\\') + 1, -6);
 

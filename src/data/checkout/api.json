@@ -1518,6 +1518,15 @@
             }
           },
           {
+            "name": "orderGroup",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "Content-Type",
             "in": "header",
             "required": true,

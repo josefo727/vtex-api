@@ -9,8 +9,7 @@ use phpDocumentor\Reflection\Types\Mixed_;
 use Psr\Http\Message\ResponseInterface;
 use Vtex\Exception\VtexException;
 
-class VtexClient
-{
+class VtexClient {
     /**
      * @var array
      */
@@ -26,11 +25,12 @@ class VtexClient
      */
     private $response;
 
+    private $cookies;
+
     /**
      * @param array $config
      */
-    public function __construct(array $config = [])
-    {
+    public function __construct(array $config = []) {
         $this->api = api($this->parseClass());
 
         if (isset($config['credentials'])) {
@@ -48,8 +48,7 @@ class VtexClient
     /**
      * @return ResponseInterface
      */
-    public function getResponse(): ResponseInterface
-    {
+    public function getResponse(): ResponseInterface {
         return $this->response;
     }
 
@@ -59,8 +58,7 @@ class VtexClient
      * @return array|boolean
      * @throws VtexException
      */
-    public function __call(string $name, array $args = [])
-    {
+    public function __call(string $name, array $args = []) {
         try {
             $apiPaths = $this->api['paths'];
             $securitySchemas = $this->api['components']['securitySchemes'] ?? [];
@@ -115,9 +113,7 @@ class VtexClient
                                             );
                                         }
                                     } elseif (isset($queryArgs[$parameter['name']])) {
-                                        $queryParams[$parameter['name']] = $queryArgs[
-                                        $parameter['name']
-                                        ];
+                                        $queryParams[$parameter['name']] = $queryArgs[$parameter['name']];
                                     }
 
                                     break;
@@ -151,11 +147,11 @@ class VtexClient
                 'query' => $queryParams
             ];
 
-            if(isset($args[0]['body'])) {
+            if (isset($args[0]['body'])) {
                 $arguments['json'] = $args[0]['body'];
             }
 
-            $client = new Client();
+            $client = new Client(['cookies' => true]);
 
             $this->response = $client->request(
                 $methodOperation,
@@ -163,12 +159,14 @@ class VtexClient
                 $arguments
             );
 
+            // Se define la colección de cookies retornadas en la petición
+            $this->cookies = $client->getConfig('cookies');
+
             try {
                 return json_decode($this->response->getBody()->getContents(), true);
             } catch (ClientException $clientException) {
                 return json_decode($this->response->getBody(), true);
             }
-
         } catch (ClientException $clientException) {
             throw new VtexException(
                 $clientException->getResponse()->getBody()->getContents()
@@ -184,11 +182,17 @@ class VtexClient
         }
     }
 
+    public function getCookie($key) {
+        if (isset($this->cookies)) {
+            return $this->cookies->getCookieByName($key);
+        }
+        return null;
+    }
+
     /**
      * @return string
      */
-    private function parseClass(): string
-    {
+    private function parseClass(): string {
         $getClass = get_class($this);
         $service = substr($getClass, strrpos($getClass, '\\') + 1, -6);
 

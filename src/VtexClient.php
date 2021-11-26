@@ -123,7 +123,7 @@ class VtexClient
                                     break;
                                 case 'header':
                                     $headers[$parameter['name']] = $parameter['schema']['default'] ??
-                                        $parameter['schema']['example'];
+                                        (isset($parameter['schema']['example']) ? $parameter['schema']['example'] : $parameter['schema']);
 
                                     break;
                             }

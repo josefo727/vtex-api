@@ -143,7 +143,9 @@ class VtexClient
             }
 
             foreach ($securitySchemas as $key => $securitySchema) {
-                $headers[$securitySchema['name']] = $this->credentials[$key];
+                if(isset($this->credentials[$key])) {
+                    $headers[$securitySchema['name']] = $this->credentials[$key];
+                }
             }
 
             $arguments = [

@@ -1,6 +1,7 @@
 {
   "name": "brandlive/vtex-api",
   "description": "Package for integration projects, API requests to Vtex.",
+  "license": "MIT",
   "keywords": [
     "vtex",
     "sdk"

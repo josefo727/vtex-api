@@ -1,38 +1,37 @@
 {
-    "name": "brandlive/vtex-api",
-    "description": "Package for integration projects, API requests to Vtex.",
-    "keywords": ["vtex","sdk"],
-    "type": "library",
-    "autoload": {
-        "psr-4": {
-            "Vtex\\": "src/"
-        },
-        "files": [
-            "src/helper.php"
-        ]
+  "name": "brandlive/vtex-api",
+  "description": "Package for integration projects, API requests to Vtex.",
+  "keywords": [
+    "vtex",
+    "sdk"
+  ],
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Vtex\\": "src/"
     },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
-        }
+    "files": [
+      "src/helper.php"
+    ]
+  },
+  "config": {
+    "platform": {
+      "php": "8.0.0"
     },
-    "config": {
-        "platform": {
-            "php": "8.0.0"
-        },
-        "optimize-autoloader": true,
-        "sort-packages": true
-    },
-    "prefer-stable": true,
-    "authors": [
-        {
-            "name": "José R. Gutierrez",
-            "email": "josefo727@gmail.com"
-        }
-    ],
-    "require": {
-        "php": ">=8.0",
-        "guzzlehttp/guzzle": "^7.2",
-        "ext-json": "*"
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "authors": [
+    {
+      "name": "José R. Gutierrez",
+      "email": "josefo727@gmail.com"
     }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "guzzlehttp/guzzle": "^7.2",
+    "ext-json": "*"
+  }
 }

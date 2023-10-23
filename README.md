@@ -2,7 +2,7 @@
 
 ### Install SDK
 ```shell
-composer require brandlive/api-vtex
+composer require brandlive/vtex-api
 ```
 
 ### Create a Catalog Client

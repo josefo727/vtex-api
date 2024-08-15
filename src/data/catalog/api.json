@@ -8282,7 +8282,7 @@
             }
           },
           {
-            "name":"skuIproductIdd",
+            "name":"productId",
             "in":"path",
             "required":true,
             "schema":{
